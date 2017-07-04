@@ -1,32 +1,33 @@
-package com.example.lehiteixeira.appedu;
-
+package com.example.lehiteixeira.appedu.MainHome;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.lehiteixeira.appedu.Model.City;
+import com.example.lehiteixeira.appedu.R;
+
 import java.util.ArrayList;
 
 
-public class ListCitiesAdapter extends RecyclerView.Adapter<ListCitiesAdapter.MyViewHolder>  {
+public class ListCardMainAdapter extends RecyclerView.Adapter<ListCardMainAdapter.MyViewHolder>  {
 
     private ArrayList<City> list_item_city;
 
     public Context mcontext;
 
-    public ListCitiesAdapter(ArrayList<City> cities, Context context) {
+    public ListCardMainAdapter(ArrayList<City> cities, Context context) {
         list_item_city = cities;
         mcontext = context;
     }
 
     // Called when RecyclerView needs a new RecyclerView.ViewHolder of the given type to represent an item.
     @Override
-    public ListCitiesAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                           int viewType) {
+    public ListCardMainAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
+                                                               int viewType) {
         // create a layout
         View view = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.main_list_item, null);

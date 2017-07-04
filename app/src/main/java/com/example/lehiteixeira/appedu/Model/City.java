@@ -1,4 +1,4 @@
-package com.example.lehiteixeira.appedu;
+package com.example.lehiteixeira.appedu.Model;
 
 import java.io.Serializable;
 

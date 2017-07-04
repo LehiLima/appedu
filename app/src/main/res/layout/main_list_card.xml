@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.lehiteixeira.appedu.MainActivity">
+    android:layout_marginTop="50dp"
+    tools:context="com.example.lehiteixeira.appedu.MainHome.MainActivity">
+    <LinearLayout
+        android:id="@+id/floating_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="1dp"
+        android:layout_margin="5dp"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_assignment_black_24dp"
+            android:background="@drawable/rounde_shape"/>
+
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_assignment_turned_in_black_24dp"
+            android:background="@drawable/rounde_shape"/>
+
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_event_black_24dp"
+            android:background="@drawable/rounde_shape"/>
+
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_refresh_black_24dp"
+            android:background="@drawable/rounde_shape"/>
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/main_list_card"
+        android:paddingTop="75dp"
         android:background="#EEEEEE"
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+    />
 
-</LinearLayout>
+</RelativeLayout>
