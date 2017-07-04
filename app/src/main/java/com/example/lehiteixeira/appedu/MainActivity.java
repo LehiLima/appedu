@@ -6,6 +6,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,6 +19,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,6 +57,25 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+
+
+        // Recebe a Lista Filtrada
+        ArrayList<City> cities = new ArrayList<City>();
+        //cities = (ArrayList<City>) getIntent().getSerializableExtra("list_cidade");
+
+        cities.add(new City("Lehi", "Lima"));
+        cities.add(new City("Paulo", "Ferreira"));
+        cities.add(new City("Douglas", "Fonseca"));
+        cities.add(new City("Paloma", "Lima"));
+        cities.add(new City("Jonathan", "Pererira"));
+
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.main_list_card);
+        ListCitiesAdapter mAdapter;
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mAdapter = new ListCitiesAdapter(cities,this);
+        mRecyclerView.setAdapter(mAdapter);
+
     }
 
     @Override
