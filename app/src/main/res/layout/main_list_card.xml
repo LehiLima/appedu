@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="50dp"
     tools:context="com.example.lehiteixeira.appedu.MainHome.MainActivity">
+
     <LinearLayout
         android:id="@+id/floating_button_bar"
         android:layout_width="match_parent"
@@ -45,6 +46,7 @@
             android:padding="10dp"
             android:src="@drawable/ic_refresh_black_24dp"
             android:background="@drawable/rounde_shape"/>
+
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

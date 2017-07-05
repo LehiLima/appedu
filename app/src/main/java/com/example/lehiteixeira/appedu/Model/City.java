@@ -8,31 +8,17 @@ import java.io.Serializable;
 
 public class City implements Serializable {
 
-    private String cidade;
-    private String estado;
+    private String title;
 
-    public City() {
-
+    public City(String title) {
+        this.title = title;
     }
 
-    public City(String cidade, String estado) {
-        this.cidade = cidade;
-        this.estado = estado;
+    public String getTitle() {
+        return title;
     }
 
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

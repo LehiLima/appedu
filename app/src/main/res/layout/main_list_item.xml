@@ -13,40 +13,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
  >
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_assignment_black_24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:elevation="30dp"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-                <TextView
-                    android:id="@+id/resultado_cidade"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:textColor="#0b0080"
-                    android:textSize="16dp"
-                    android:text="CIDADE"
-                    android:padding="15dp"/>
-                <TextView
-                    android:id="@+id/resultado_estado"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:textColor="#0b0080"
-                    android:textSize="16dp"
-                    android:text="Estado"
-                    android:padding="15dp"/>
-            </LinearLayout>
-        <ImageView
+                android:textSize="20sp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                tools:text="Promoção na linha humor(teste)"
+                android:layout_weight="0.7"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/prettyCreatedAt"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_menu_gray_24dp"
-            />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="5dp"
+            android:text="Há x horas"/>
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/quiz"
+            android:transitionName="imgQuiz"/>
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="17sp"
+            android:ellipsize="end"
+            android:maxEms="60"
+            android:text="Summary PlacerHolder"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:text="Lembra mais tarde"
+                android:textColor="@color/colorGray" />
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorGray"
+                android:clickable="true"
+                android:text="Começar"/>
+        </LinearLayout>
     </LinearLayout>
+
+
 </RelativeLayout>
 </android.support.v7.widget.CardView>

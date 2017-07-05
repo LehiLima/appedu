@@ -61,24 +61,28 @@ public class MainActivity extends AppCompatActivity
         ArrayList<City> cities = new ArrayList<City>();
         //cities = (ArrayList<City>) getIntent().getSerializableExtra("list_cidade");
 
-        cities.add(new City("Lehi", "Lima"));
-        cities.add(new City("Paulo", "Ferreira"));
-        cities.add(new City("Douglas", "Fonseca"));
-        cities.add(new City("Paloma", "Lima"));
-        cities.add(new City("Jonathan", "Pererira"));
-        cities.add(new City("Jonathan", "Pererira"));
-        cities.add(new City("Jonathan", "Pererira"));
-        cities.add(new City("Jonathan", "Pererira"));
-        cities.add(new City("Jonathan", "Pererira"));
-        cities.add(new City("Jonathan", "Pererira"));
-        cities.add(new City("Jonathan", "Pererira"));
-        cities.add(new City("Jonathan", "Pererira"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+        cities.add(new City("Lehi"));
+
+
 
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.main_list_card);
         ListCardMainAdapter mAdapter;
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new ListCardMainAdapter(cities,this);
+        mAdapter = new ListCardMainAdapter(cities,this,this);
         mRecyclerView.setAdapter(mAdapter);
 
     }
