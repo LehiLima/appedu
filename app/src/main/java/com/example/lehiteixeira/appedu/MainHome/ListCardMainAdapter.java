@@ -3,6 +3,9 @@ package com.example.lehiteixeira.appedu.MainHome;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +19,7 @@ import com.example.lehiteixeira.appedu.Model.City;
 import com.example.lehiteixeira.appedu.Quiz.Quiz;
 import com.example.lehiteixeira.appedu.R;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 
@@ -25,6 +29,7 @@ public class ListCardMainAdapter extends RecyclerView.Adapter<ListCardMainAdapte
 
     public Context mcontext;
     public  Activity mactivity;
+    public static Bitmap b;
 
     public ListCardMainAdapter(ArrayList<City> cities, Context context, Activity activity) {
         list_item_city = cities;
@@ -55,6 +60,10 @@ public class ListCardMainAdapter extends RecyclerView.Adapter<ListCardMainAdapte
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mcontext, Quiz.class);
+
+                //Convert to byte array
+                Bitmap bmp=((BitmapDrawable)viewHolder.img.getDrawable()).getBitmap();
+                b = bmp;
                 ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(mactivity, viewHolder.img ,"imgQuiz");
                 mcontext.startActivity(intent,options.toBundle());
             }

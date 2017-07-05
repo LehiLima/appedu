@@ -7,10 +7,25 @@
     tools:context="com.example.lehiteixeira.appedu.Quiz.Quiz">
 
     <ImageView
+        android:id="@+id/img2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        android:src="@drawable/quiz"
         android:transitionName="imgQuiz"/>
+
+    <TextView
+        android:id="@+id/txtNome"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Rrnato Troxa!!!!!!!"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="9dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/img2"
+        android:visibility="gone"/>
 
 </RelativeLayout>

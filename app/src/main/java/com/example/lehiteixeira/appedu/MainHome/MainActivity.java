@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity
 
         // Recebe a Lista Filtrada
         ArrayList<City> cities = new ArrayList<City>();
-        //cities = (ArrayList<City>) getIntent().getSerializableExtra("list_cidade");
 
         cities.add(new City("Lehi"));
         cities.add(new City("Lehi"));
@@ -75,8 +74,6 @@ public class MainActivity extends AppCompatActivity
         cities.add(new City("Lehi"));
         cities.add(new City("Lehi"));
         cities.add(new City("Lehi"));
-
-
 
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.main_list_card);
         ListCardMainAdapter mAdapter;
