@@ -12,11 +12,10 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.lehiteixeira.appedu.MainHome.ListCardMainAdapter;
 import com.example.lehiteixeira.appedu.R;
 
-public class Quiz extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity {
 
     private TextView textAnim;
 
@@ -28,7 +27,7 @@ public class Quiz extends AppCompatActivity {
         ImageView img2 = (ImageView) findViewById(R.id.img2);
         img2.setImageBitmap(ListCardMainAdapter.b);
 
-        textAnim =  (TextView) findViewById(R.id.txtNome);
+        //textAnim =  (TextView) findViewById(R.id.txtNome);
 
         img2.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -47,7 +46,7 @@ public class Quiz extends AppCompatActivity {
                         ViewAnimationUtils.createCircularReveal(textAnim, cx, cy, 0, finalRadius);
                 // make the view visible and start the animation
                 anim.start();
-                    textAnim.setVisibility(View.VISIBLE);
+              //      textAnim.setVisibility(View.VISIBLE);
              }else {
                 // get the center for the clipping circle
                 int cx = (textAnim.getLeft() + textAnim.getRight()) / 2;
@@ -61,7 +60,7 @@ public class Quiz extends AppCompatActivity {
                 @Override
                  public void onAnimationEnd(Animator animation) {
                            super.onAnimationEnd(animation);
-                         textAnim.setVisibility(View.INVISIBLE);
+                 //        textAnim.setVisibility(View.INVISIBLE);
                    }
                   });
                     // start the animation
@@ -70,6 +69,5 @@ public class Quiz extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

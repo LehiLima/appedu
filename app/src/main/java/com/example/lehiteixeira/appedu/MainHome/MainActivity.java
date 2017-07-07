@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-import com.example.lehiteixeira.appedu.Model.City;
+import com.example.lehiteixeira.appedu.Model.Quiz;
 import com.example.lehiteixeira.appedu.R;
 
 import java.util.ArrayList;
@@ -58,22 +58,22 @@ public class MainActivity extends AppCompatActivity
 
 
         // Recebe a Lista Filtrada
-        ArrayList<City> cities = new ArrayList<City>();
+        ArrayList<Quiz> cities = new ArrayList<Quiz>();
 
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
-        cities.add(new City("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehi"));
 
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.main_list_card);
         ListCardMainAdapter mAdapter;

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.lehiteixeira.appedu.Quiz.Quiz">
+    tools:context="com.example.lehiteixeira.appedu.Quiz.QuizActivity">
 
     <ImageView
         android:id="@+id/img2"
@@ -13,19 +17,100 @@
         android:scaleType="fitXY"
         android:transitionName="imgQuiz"/>
 
+    <!--<TextView-->
+        <!--android:id="@+id/txtNome"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="#B2DFDB"-->
+        <!--android:text=""-->
+        <!--android:textSize="18sp"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/img2"-->
+        <!--/>-->
+
     <TextView
-        android:id="@+id/txtNome"
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:background="@android:color/holo_blue_light"
-        android:text="Rrnato Troxa!!!!!!!"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:layout_marginBottom="9dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/img2"
-        android:visibility="gone"/>
+        android:layout_height="wrap_content"
+        android:text="Questão 1:"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_below="@+id/img2"/>
+
+    <RelativeLayout
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B2DFDB"
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_text_button"
+            android:layout_margin="5dp"
+            android:padding="15dp"
+            android:text="What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question">
+
+        <RadioButton
+            android:id="@+id/radioA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rbtn_selector"
+            android:text="A) - Somente I-II estão corretas "
+            android:button="@null"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:text="B) - somente a I esta correta" />
+
+        <RadioButton
+            android:id="@+id/radioC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:text="C) - Todas estão corretas" />
+
+        <RadioButton
+            android:id="@+id/radioD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:text="D) - Nenhuma das anteriores" />
+
+    </RadioGroup>
+
 
 </RelativeLayout>
+</ScrollView>
