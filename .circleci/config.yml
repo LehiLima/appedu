@@ -32,17 +32,21 @@ jobs:
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
-
-      - jobs:
-          build:
-            working_directory: ~/code
-            command: ./gradlew assembleDebug
-
       - save_cache:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
 
-
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
 
