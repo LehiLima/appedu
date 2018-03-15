@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         ArrayList<Quiz> cities = new ArrayList<Quiz>();
 
         cities.add(new Quiz("LehiD"));
-        cities.add(new Quiz("Lehi"d));
+        cities.add(new Quiz("Lehi"));
         cities.add(new Quiz("Lehi"));
         cities.add(new Quiz("Lehi"));
         cities.add(new Quiz("Lehi"));
