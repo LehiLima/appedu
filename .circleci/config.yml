@@ -40,7 +40,7 @@ jobs:
           command: ./gradlew androidDependencies
 
       - run:
-          name: Download Dependencies
+          name: build
           command: ./gradlew assemble
 
       - save_cache:
