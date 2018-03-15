@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity
 
         cities.add(new Quiz("LehiD"));
         cities.add(new Quiz("Lehi"));
-        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("Lehil"));
         cities.add(new Quiz("Lehi"));
         cities.add(new Quiz("Lehi"));
         cities.add(new Quiz("Lehi"));
