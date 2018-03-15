@@ -44,7 +44,7 @@ jobs:
 
 general:
     artifacts:
-        - /home/ubuntu/your-app-name/app/build/outputs/apk/
+        - /home/ubuntu/app.edu/build/outputs/apk/
 
 machine:
     environment:
