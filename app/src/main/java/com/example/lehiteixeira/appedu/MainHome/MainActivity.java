@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity
         // Recebe a Lista Filtrada
         ArrayList<Quiz> cities = new ArrayList<Quiz>();
 
-        cities.add(new Quiz("Lehi"));
+        cities.add(new Quiz("LehiW"));
         cities.add(new Quiz("Lehi"));
         cities.add(new Quiz("Lehil"));
         cities.add(new Quiz("Lehi"));
