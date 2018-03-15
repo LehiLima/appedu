@@ -20,7 +20,23 @@ jobs:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
 
-    test:
-      override:
-        - ./gradlew assembleDebug
-        - cp -r appedu/build/outputs $CIRCLE_ARTIFACTS
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: v1-dependencies-{{ checksum "build.gradle" }}
+
+  test:
+    override:
+      - ./gradlew assembleDebug
+      - cp -r appedu/build/outputs $CIRCLE_ARTIFACTS
