@@ -22,6 +22,7 @@ jobs:
 
     steps:
       - checkout
+      - *restore_cache
 
       # Download and cache dependencies
       - restore_cache:
@@ -36,6 +37,14 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
+      - run:
+          name: Gradle build (debug)
+          command: ./gradlew -PciBuild=true :app:assembleDebug
+      - *persist_debug_workspace
+
+      - store_artifacts:
+          path: app/build/outputs/apk/
+          destination: /apk/
     test:
       override:
        - ./gradlew assembleDebug
