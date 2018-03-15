@@ -20,11 +20,6 @@ jobs:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
 
-    test:
-      override:
-        - (./gradlew assembledebug):
-           timeout: 360
-
     steps:
       - checkout
 
@@ -40,3 +35,7 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
+
+    test:
+      override:
+        - ./gradlew assembleDebug
