@@ -38,6 +38,6 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
-      test:
-        override:
-          - ./gradlew assembleDebug
+test:
+  override:
+    - ./gradlew assembleDebug
