@@ -85,7 +85,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:clickable="true"
-                android:text="Lembra mais tarde"
+                android:text="Lembrar mais tarde"
                 android:textColor="@color/colorGray" />
 
             <Button
