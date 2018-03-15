@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity
         cities.add(new Quiz("Lehi"));
         cities.add(new Quiz("Lehi"));
         cities.add(new Quiz("Lehi"));
-        cities.add(new Quiz("Lehi"));
 
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.main_list_card);
         ListCardMainAdapter mAdapter;
