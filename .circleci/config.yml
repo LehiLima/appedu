@@ -33,6 +33,11 @@ jobs:
           name: Download Dependencies
           command: ./gradlew androidDependencies
 
+      - jobs:
+          build:
+            working_directory: ~/code
+            command: ./gradlew assembleDebug
+
       - save_cache:
           paths:
             - ~/.gradle
